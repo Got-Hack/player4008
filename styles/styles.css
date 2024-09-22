@@ -302,6 +302,12 @@ pre {
         font-size: 24px;
     }
 
+    .content-about {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
     .content p, .content-about p, .ancmnt-paragraph, .faq-paragraph {
         font-size: 16px;
         line-height: 1.4;

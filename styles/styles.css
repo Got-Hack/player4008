@@ -242,14 +242,94 @@ pre {
     background-color: #0056b3;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .header-buttons button {
+        padding: 8px 16px;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .layout-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: auto;
+        padding: 10px;
+    }
+
+    .sidebar nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar nav ul li a {
+        font-size: 16px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p, .content-about p, .ancmnt-paragraph, .faq-paragraph {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .content-about h2, .ancmnt-header, .bytebeat-header {
+        font-size: 24px;
+    }
+
+    .content-about h4, .content-about h5 {
+        font-size: 18px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
     pre {
         font-size: 14px;
+        max-width: 100%;
     }
 
     .copy-btn {
         padding: 8px 16px;
         font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
     }
 }

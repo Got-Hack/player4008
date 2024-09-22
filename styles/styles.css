@@ -252,35 +252,49 @@ pre {
     }
 
     body {
+        display: flex;
         flex-direction: column;
+        padding: 10px; /* Add padding for better spacing */
     }
 
     .header-container {
+        display: flex;
         flex-direction: column;
         text-align: center;
+        padding: 10px 0; /* Optional spacing */
     }
 
     .page-title {
         font-size: 20px;
     }
 
+    .header-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
+
     .header-buttons button {
         padding: 8px 16px;
         margin: 5px 0;
         font-size: 14px;
+        width: 100%; /* Ensure full width on small screens */
     }
 
     .layout-container {
+        display: flex;
         flex-direction: column;
         padding: 10px;
     }
 
     .sidebar {
+        display: flex;
+        flex-direction: column;
         position: relative;
         width: 100%;
+        height: auto;
         top: 0;
         left: 0;
-        height: auto;
         padding: 10px;
     }
 
@@ -293,9 +307,9 @@ pre {
     }
 
     .content {
+        width: 100%;
         margin-left: 0;
         padding: 10px;
-        width: 100%;
     }
 
     .content h2 {
@@ -303,9 +317,9 @@ pre {
     }
 
     .content-about {
+        width: 100%;
         margin-left: 0;
         padding: 10px;
-        width: 100%;
     }
 
     .content p, .content-about p, .ancmnt-paragraph, .faq-paragraph {
@@ -322,6 +336,7 @@ pre {
     }
 
     .container {
+        display: flex;
         flex-direction: column;
         padding: 10px;
     }
@@ -329,14 +344,17 @@ pre {
     pre {
         font-size: 14px;
         max-width: 100%;
+        overflow-x: auto; /* Ensure code blocks are scrollable on small screens */
     }
 
     .copy-btn {
         padding: 8px 16px;
         font-size: 14px;
+        width: 100%; /* Full width on smaller screens */
     }
 
     footer {
         padding: 10px;
+        text-align: center; /* Center footer content */
     }
 }

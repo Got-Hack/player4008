@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.page-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.header-buttons button {
+    background-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-buttons button:hover {
+    background-color: #ddd;
+}
+
+.layout-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto; /* Enable scrolling for the layout */
+}
+
+.sidebar {
+    background-color: #333;
+    width: 350px;
+    padding: 20px;
+    height: 100%; /* Keep sidebar height to 100% of its container */
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Change to absolute for proper layout */
+    top: 75px; /* Maintain the top offset */
+    left: 0; /* Align sidebar with the left side of the screen */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-left: 260px; /* Adjust margin to account for the sidebar width plus spacing */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* About Page */
+.content-about {
+    margin-left: 260px; /* Adjust margin to account for the sidebar */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.content-about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.content-about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.title-faqs {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.content-about h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.faq-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.content-about h5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Video Contents */
+.bytebeat-header {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Announcements Page */
+.content-ancmnt {
+    margin-left: 260px; /* Adjust margin to account for the sidebar */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.ancmnt-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.ancmnt-header {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Tutorial 1 Code container*/
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Code block */
+pre {
+    background-color: #2d2d2d;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 80vh;
+    max-width: 90vw;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Copy button */
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    pre {
+        font-size: 14px;
+    }
+
+    .copy-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Player4008's Website Video Content</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="page-title">Player4008's Website</h1>
+            <div class="header-buttons">
+                <button onclick="window.location.href='index'">Home</button>
+                <button class="header-button" onclick="window.location.href='about'">About</button>
+                <button class="header-button" onclick="window.open('https://www.youtube.com/@player40008', '_blank')">Youtube</button>
+            </div>
+        </div>
+    </header>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" id="embed-bytebeat-video">Byte Beat in CSharp</a></li>
+                    <li><a href="#" id="embed-messagebox-video">Message box C# | Tutorial 1</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="video-section">
+            </section>
+        </main>
+    </div>
+    <script>
+        document.getElementById('embed-bytebeat-video').addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            const videoSection = document.getElementById('video-section');
+            videoSection.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mLvE99tIcJE?si=yVFmJ_HaLU81ZJjF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1 class="bytebeat-header">Here are the video resources:</h1>
+                <a href="#" id="embed-bytebeat-video">Source Code (not available at the moment)</a>
+            `;
+        });
+
+        document.getElementById('embed-messagebox-video').addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            const videoSection = document.getElementById('video-section');
+            videoSection.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0w4R79iodBs?si=NN8Gbch5BTeUWJNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1 class="bytebeat-header">Here are the video resources:</h1>
+                <a href="csharptutorialone" id="message-box-source-code">Source Code</a>
+            `;
+        });
+    </script>
+</body>
+</html>

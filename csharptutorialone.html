@@ -39,66 +39,65 @@
     <div class="container">
         <button class="copy-btn" onclick="copyCode()">Copy Code</button>
         <pre id="code-block">
-            using System;
-            using System.Collections.Generic;
-            using System.ComponentModel;
-            using System.Data;
-            using System.Drawing;
-            using System.Linq;
-            using System.Text;
-            using System.Threading.Tasks;
-            using System.Windows.Forms;
-            
-            namespace Tutorials
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Tutorials
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            messagebox1();
+        }
+        public void messagebox1()
+        {
+            //MessageBoxButtons.YesNo for the simple yes and no buttons
+            //MessageBoxButtons.OK for the simple ok button
+            //MessageBoxButtons.OKCancel for the ok and cancel buttons
+            //MessageBoxButtons.YesNoCancel for the yes, no and cancel buttons
+            //MessageBoxButtons.AbortRetryIgnore for the abort, retry and ignore buttons
+            //MessageBoxButtons.RetryCancel for the retry and cancel buttons
+            //MessageBoxButtons.YesNoCancel for the yes, no and cancel buttons
+
+            //MessageBoxIcon.Question for the question icon
+            //MessageBoxIcon.Exclamation for the exclamation icon
+            //MessageBoxIcon.Warning for the yellow warning trinagle
+            //MessageBoxIcon.Information for the blue circle with the information "i"
+            //MessageBoxIcon.Error for the red circle with the error "x"
+            //MessageBoxIcon.None you can choose to use this but if you don't the result will be the same
+            //MessageBoxIcon.Stop is the same icon as the error is
+
+            //Remember that when you click on a MessageBox button it closes the MessageBox if there is nothing happening after the message box button is pressed
+            //and remember that the else statement is not only for the "No" button it is for the close (aka "x") button too
+            if (MessageBox.Show("Yes or No", "Choose one", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                public partial class Form1 : Form
-                {
-                    public Form1()
-                    {
-                        InitializeComponent();
-                    }
-            
-                    private void button1_Click(object sender, EventArgs e)
-                    {
-                        messagebox1();
-                    }
-                    public void messagebox1()
-                    {
-                        //MessageBoxButtons.YesNo for the simple yes and no buttons
-                        //MessageBoxButtons.OK for the simple ok button
-                        //MessageBoxButtons.OKCancel for the ok and cancel buttons
-                        //MessageBoxButtons.YesNoCancel for the yes, no and cancel buttons
-                        //MessageBoxButtons.AbortRetryIgnore for the abort, retry and ignore buttons
-                        //MessageBoxButtons.RetryCancel for the retry and cancel buttons
-                        //MessageBoxButtons.YesNoCancel for the yes, no and cancel buttons
-            
-                        //MessageBoxIcon.Question for the question icon
-                        //MessageBoxIcon.Exclamation for the exclamation icon
-                        //MessageBoxIcon.Warning for the yellow warning trinagle
-                        //MessageBoxIcon.Information for the blue circle with the information "i"
-                        //MessageBoxIcon.Error for the red circle with the error "x"
-                        //MessageBoxIcon.None you can choose to use this but if you don't the result will be the same
-                        //MessageBoxIcon.Stop is the same icon as the error is
-            
-                        //Remember that when you click on a MessageBox button it closes the MessageBox if there is nothing happening after the message box button is pressed
-                        //and remember that the else statement is not only for the "No" button it is for the close (aka "x") button too
-                        if (MessageBox.Show("Yes or No", "Choose one", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            MessageBox.Show("You pressed yes", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("You pressed no", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
+                MessageBox.Show("You pressed yes", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+            else
+            {
+                MessageBox.Show("You pressed no", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+    }
+}
+
         </pre>
     </div>
 
     <script>
-        // Function to copy code
         function copyCode() {
             const codeBlock = document.getElementById('code-block').innerText;
             const textArea = document.createElement('textarea');

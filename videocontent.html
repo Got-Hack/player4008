@@ -24,6 +24,7 @@
                 <ul>
                     <li><a href="#" id="embed-bytebeat-video">Byte Beat in CSharp</a></li>
                     <li><a href="#" id="embed-messagebox-video">Message box C# | Tutorial 1</a></li>
+                    <li><a href="#" id="embed-rickrollbatch-video">How to Rick Roll with a batch file in less than 15 seconds</a></li>
                 </ul>
             </nav>
         </aside>
@@ -53,6 +54,17 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0w4R79iodBs?si=NN8Gbch5BTeUWJNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <h1 class="bytebeat-header">Here are the video resources:</h1>
                 <a href="csharptutorialone" id="message-box-source-code">Source Code</a>
+            `;
+        });
+
+        document.getElementById('embed-rickrollbatch-video').addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            const videoSection = document.getElementById('video-section');
+            videoSection.innerHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/An3WozhAP9M?si=GaPZaF18JHa2duc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1 class="bytebeat-header">Here are the video resources:</h1>
+                <a href="rickrollbatch" id="message-box-source-code">Source Code</a>
             `;
         });
     </script>

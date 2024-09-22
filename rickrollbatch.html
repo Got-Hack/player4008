@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Player4008's Website How to Rick Roll with a batch file in less than 15 seconds</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            body, html {
+                font-size: 14px;
+                padding: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="page-title">Player4008's Website Code Repos</h1>
+            <div class="header-buttons">
+                <button onclick="window.location.href='index'">Home</button>
+                <button class="header-button" onclick="window.location.href='about'">About</button>
+                <button class="header-button" onclick="window.open('https://www.youtube.com/@player40008', '_blank')">Youtube</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+        <pre id="code-block">
+@echo off
+curl ascii.live/rick
+        </pre>
+    </div>
+
+    <script>
+        function copyCode() {
+            const codeBlock = document.getElementById('code-block').innerText;
+            const textArea = document.createElement('textarea');
+            textArea.value = codeBlock;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
